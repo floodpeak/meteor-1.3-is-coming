@@ -178,6 +178,17 @@
 				</section>
 
 				<section>
+					<h2>Idea behind Modules</h2>
+					<ul>
+						<li>No need global namespace</li>
+						<li>share things between files using import and export</li>
+						<li>import dependencies</li>
+						<li>export ability</li>
+						<li>portable and reusable</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>NPM</h2>
 					<ol>
 						<li>Began as the package manager for Node.js</li>
@@ -185,7 +196,50 @@
 					</ol>
 				</section>
 
+				<section data-markdown>
+						## using npm
+						```
+							npm install react --save
+						```
+						Once this package is in our ` node_modules/ ` directory, we can import it
+				</section>
 
+				<section>
+					but wait...
+				</section>
+
+				<section data-markdown>
+					we know npm package exports things like this
+					```javascript
+						var React = {
+							//great code here
+						}
+						module.exports = React;
+					```
+				</section>
+
+				<section data-markdown>
+					not like this
+					```javascript
+						export default React;
+					```
+				</section>
+
+				<section>
+					npm uses CommonJS
+				</section>
+
+				<section>
+					The magic is Babel
+				</section>
+
+				<section>
+					By default, Babel transpiles ES6 import statements to CommonJS
+				</section>
+
+				<section>
+					our import statements only need to include the name of the Node module
+				</section>
 
 				<section>
 					<h2>总结</h2>
