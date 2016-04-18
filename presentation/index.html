@@ -104,7 +104,7 @@
 					<h2>目录</h2>
 					<ul>
 						<li>ES6 Modules</li>
-						<li>Built-in application testing</li>
+						<li>Testing</li>
 						<li>New Cordova implementation</li>
 					</ul>
 				</section>
@@ -230,15 +230,55 @@
 				</section>
 
 				<section>
-					The magic is Babel
+					the magic is Babel
 				</section>
 
 				<section>
-					By default, Babel transpiles ES6 import statements to CommonJS
+					by default, Babel transpiles ES6 import statements to CommonJS
 				</section>
 
 				<section>
 					our import statements only need to include the name of the Node module
+				</section>
+
+
+				<section>
+					<h2>Testing</h2>
+					<ul>
+						<li>new command: meteor test</li>
+						<li>Full app testing</li>
+						<li>Module testing</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Full app testing</h2>
+					<ul>
+						<li class="fragment">loads test files matching *.app-test[s].* and *.app-spec[s].*</li>
+						<li class="fragment">load our application code as Meteor normally would</li>
+						<li class="fragment">test driver package is only one choice now: practicalmeteor:mocha</li>
+						<li class="fragment">meteor test --full-app --driver-package &lt;driver-package&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Module testing</h2>
+					<ul>
+						<li class="fragment">loads test files matching *.test[s].* and *.spec[s].*</li>
+						<li class="fragment"><span class="emphasize-blue">doesn’t</span> load any of our application code as Meteor normally would</li>
+						<li class="fragment">sets the Meteor.isTest flag to be true</li>
+						<li class="fragment">meteor test --driver-package &lt;driver-package&gt;</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>tests/ directory</h2>
+					<ul>
+						<li class="fragment">meteor test ignore any files located in any tests/ directory</li>
+						<li class="fragment">any directory named tests/ is not loaded anywhere</li>
+						<li class="fragment">so you can ignore Meteor's built-in test tools</li>
+						<li class="fragment">where mantra tests live in</li>
+					</ul>
 				</section>
 
 				<section>
@@ -246,6 +286,10 @@
 					<ul>
 						<li></li>
 					</ul>
+				</section>
+
+				<section>
+					<img style="width:600px" data-src="./public/Join-Us.jpg">
 				</section>
 
 				<section>
